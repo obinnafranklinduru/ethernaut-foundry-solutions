@@ -9,7 +9,7 @@ import {Delegate, Delegation} from "../src/06-Delegation.sol";
  */
 contract DelegationReordered {
     Delegate public delegate; // Storage Slot 0!
-    address public owner;     // Storage Slot 1!
+    address public owner; // Storage Slot 1!
 
     constructor(address _delegateAddress) {
         delegate = Delegate(_delegateAddress);
