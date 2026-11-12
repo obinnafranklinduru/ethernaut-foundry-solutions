@@ -3,7 +3,7 @@ pragma solidity ^0.8.20;
 
 import {Test, console2} from "forge-std/Test.sol";
 import {CoinFlip} from "../src/03-CoinFlip.sol";
-import {CoinFlipAttack} from "../src/challenges/CoinFlipAttack.sol";
+import {CoinFlipAttack} from "../src/attackers/CoinFlipAttack.sol";
 
 contract CoinFlipTest is Test {
     CoinFlip public coinFlip;

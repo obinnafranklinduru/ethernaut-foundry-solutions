@@ -3,7 +3,7 @@
 # Ensure ~/.foundry/bin is in PATH for forge / cast / anvil
 export PATH := $(HOME)/.foundry/bin:$(PATH)
 
-.PHONY: help build fmt clean sim exploit test-fallback owner balance storage
+.PHONY: help build test fmt clean sim exploit test-fallback owner balance storage wins
 
 # Find script matching LEVEL (e.g. LEVEL=01 matches script/01-Fallback.s.sol)
 SCRIPT = $(shell find script -maxdepth 1 -name "$(LEVEL)-*.s.sol" 2>/dev/null | head -n 1)
@@ -29,6 +29,9 @@ clean:
 	forge clean
 
 # --- Testing ---
+test:
+	forge test -vvv
+
 test-fallback:
 	forge test --match-contract FallbackTest -vvvv
 
