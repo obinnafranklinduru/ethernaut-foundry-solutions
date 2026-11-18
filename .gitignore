@@ -10,3 +10,6 @@ broadcast/
 
 # Dotenv file
 .env
+
+# Local content generation pipeline (untracked)
+content/
